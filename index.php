@@ -8,3 +8,6 @@ $var = array(
 	'Color'	=>	'Yellow',
 	'Number'=>	7, // in php, trailing commas are allowed.
 );
+
+// 2. Modify the 3rd element from the above array by multiplying the value 7 to equal 21 using an equation.
+$var['Number'] = $var['Number'] * 3;
