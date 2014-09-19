@@ -46,5 +46,15 @@ $json = json_decode($json);
 <?php endforeach; ?>
 </ul>
 
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(function() {
+	// jQuery 1: Upon clicking the first list item replace the word “Apple” with “Orange”
+	$("li:first").click(function() {
+		$(this).html($(this).html().replace("Apple","Orange"));
+	});
+});
+</script>
 </body>
 </html>
