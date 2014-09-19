@@ -18,9 +18,11 @@ $json = json_encode($var);
 // 4. Decode the above JSON variable back to a normal array and echo to browser using a foreach loop in an unordered list.
 $json = json_decode($json);
 
+// 5. Place a condition inside the foreach loop so that the value in the 2nd element is displayed in lowercase.
+
 ?>
 <ul>
 <?php foreach($json as $key=>$val): ?>
-	<li><?php echo $key; ?> = <?php echo $val; ?></li>
+	<li><?php echo $key; ?> = <?php echo ($key === 'Color' ? strtolower($val): $val); ?></li>
 <?php endforeach; ?>
 </ul>
