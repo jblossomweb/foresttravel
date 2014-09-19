@@ -11,3 +11,6 @@ $var = array(
 
 // 2. Modify the 3rd element from the above array by multiplying the value 7 to equal 21 using an equation.
 $var['Number'] = $var['Number'] * 3;
+
+// 3. Convert the array variable created above into JSON and save into a new variable.
+$json = json_encode($var);
