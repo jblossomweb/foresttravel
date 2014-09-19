@@ -14,3 +14,13 @@ $var['Number'] = $var['Number'] * 3;
 
 // 3. Convert the array variable created above into JSON and save into a new variable.
 $json = json_encode($var);
+
+// 4. Decode the above JSON variable back to a normal array and echo to browser using a foreach loop in an unordered list.
+$json = json_decode($json);
+
+?>
+<ul>
+<?php foreach($json as $key=>$val): ?>
+	<li><?php echo $key; ?> = <?php echo $val; ?></li>
+<?php endforeach; ?>
+</ul>
