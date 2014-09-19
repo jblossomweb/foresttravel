@@ -54,6 +54,12 @@ $(function() {
 	$("li:first").click(function() {
 		$(this).html($(this).html().replace("Apple","Orange"));
 	});
+	// jQuery 2: Upon hovering the mouse over the second list item change its background color to some other color.
+	$("li:eq(1)").hover(function() {
+		$(this).css({'background-color': '#C0FFEE'});
+	}, function(){
+		$(this).css({'background-color': '#BADA55'});
+	});
 });
 </script>
 </body>
