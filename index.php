@@ -60,6 +60,15 @@ $(function() {
 	}, function(){
 		$(this).css({'background-color': '#BADA55'});
 	});
+	// jQuery 3: Upon clicking the third list item have it fade away and reappear above the first item.
+	$("li:eq(2)").click(function() {
+		var el = $(this);
+		el.fadeOut("fast",function(){
+			el.parent('ul').prepend(el);
+			el.fadeIn("fast");
+		});
+		
+	});
 });
 </script>
 </body>
