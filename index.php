@@ -37,6 +37,9 @@ $json = json_decode($json);
 	ul li:hover{
 		background-color: #EFFEC7;
 	}
+	button{
+
+	}
 </style>
 </head>
 <body>
@@ -45,7 +48,7 @@ $json = json_decode($json);
 	<li><?php echo $key; ?> = <?php echo ($key === 'Color' ? strtolower($val): $val); ?></li>
 <?php endforeach; ?>
 </ul>
-
+<button>Save</button>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
@@ -68,6 +71,23 @@ $(function() {
 			el.fadeIn("fast");
 		});
 		
+	});
+	// MySQL 2: Add a link below the unordered list that would save the list items into the database as separate rows in the order in which they are displayed - using jQuery ajax
+	$("button").click(function() {
+		var el = $(this);
+		var records = [];
+		$('ul').children('li').each(function() {
+			var string = $(this).html().replace(' ','');
+			var array = string.split('=');
+			records.push({
+				"label": array[0],
+				"value": array[1]
+			});
+		});
+		records = $.extend({}, records);
+		$.post('save.php',records,function(){
+			el.html('Saved!').attr('disabled',true);
+		});
 	});
 });
 </script>
