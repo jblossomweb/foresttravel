@@ -4,7 +4,7 @@ In order to continue with our hiring process, you must complete a skill assessme
  
 Please follow the instructions below
  
-Skills Assessment (send to cedery@foresttravel.com with subject line: "Web Developer Candidate - (Your Name)"
+Skills Assessment 
 
 Please complete the following exercise. Please turn in all files including SQL Import File or SQL create statement. We will be scoring several aspects of the exercise, some of the most important ones are:
 
